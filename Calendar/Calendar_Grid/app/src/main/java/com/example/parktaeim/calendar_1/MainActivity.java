@@ -1,5 +1,6 @@
 package com.example.parktaeim.calendar_1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -32,8 +33,17 @@ public class MainActivity extends ActionBarActivity
         CalendarView cv = ((CalendarView)findViewById(R.id.calendar_view));
         cv.updateCalendar(events);
 
+        //findViewById(R.id.plusButton).setOnClickListener(mClickListener);
 
     }
+
+//    Button.OnClickListener mClickListener = new View.OnClickListener() {
+//        public void onClick(View v) {
+//            Intent intent = new Intent(MainActivity.this, AddActivity.class);
+//            startActivity(intent);
+//        }
+//
+//    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)

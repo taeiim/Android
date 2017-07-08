@@ -47,6 +47,14 @@ android:background="@android:color/white">
         android:src="@drawable/next_icon"/>
 
 
+
+    <Button
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_toRightOf="@id/calendar_next_button"
+        android:layout_alignParentRight="true"
+        android:text="+"
+        />
 </RelativeLayout>
 
 <!-- 요일(월화수목금토일) 표시 -->
@@ -112,12 +120,25 @@ android:background="@android:color/white">
         android:gravity="center_horizontal"
         android:textColor="#222222"
         android:text="SAT"/>
+
+
 </LinearLayout>
 
 <!-- 그리드 뷰로 날짜 -->
 <GridView
     android:id="@+id/calendar_grid"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:numColumns="7"/>
+    android:layout_height="wrap_content"
+    android:numColumns="7"
+
+
+
+    />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+"/>
+
 </LinearLayout>

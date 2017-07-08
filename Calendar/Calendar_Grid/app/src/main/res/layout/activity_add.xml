@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="제목"
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="시작"/>
+
+    <EditText
+        android:id="@+id/startTimeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex)2017.06.15. 오전 9시"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="종료"/>
+
+    <EditText
+        android:id="@+id/finishTimeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex)2017.06.15. 오후 2시"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/alltimeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="하루 종일                                      "/>
+
+    <CheckBox
+        android:id="@+id/notimeCheck"
+        android:layout_toRightOf="@+id/alltimeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간 설정 안함"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hashtagText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="해시태그" />
+
+    <EditText
+        android:id="@+id/hashtagEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="#공부, #시험" />
+
+    <TextView
+        android:id="@+id/memoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용, 메모" />
+
+    <EditText
+        android:id="@+id/memoEdit"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:ems="30"
+        android:inputType="textPersonName"
+        android:hint="올백맞아야지 우하하하하하"/>
+
+    <TextView
+        android:id="@+id/alarmText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="알림" />
+
+    <EditText
+        android:id="@+id/alarmEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="없음" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="취소"/>
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_toRightOf="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="완료"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -2,9 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26"
+    buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.parktaeim.calendar_1"
+        applicationId "com.example.parktaeim.recyclerview"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -27,4 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:recyclerview-v7:26.+'
 }

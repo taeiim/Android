@@ -2,7 +2,8 @@ package com.example.parktaeim.calendar_1;
 
     import android.app.Activity;
         import android.content.Context;
-        import android.content.res.TypedArray;
+    import android.content.Intent;
+    import android.content.res.TypedArray;
         import android.graphics.Color;
         import android.graphics.Typeface;
         import android.os.Bundle;
@@ -48,6 +49,7 @@ public class CalendarView extends LinearLayout
     private ImageView btnNext;
     private TextView txtDate;
     private GridView grid;
+
 
     // 계절마다 캘린더 색상 변경
     int[] rainbow = new int[] {
@@ -108,6 +110,8 @@ public class CalendarView extends LinearLayout
             ta.recycle();
         }
     }
+
+    Button addBtn;
     private void assignUiElements()
     {
         header = (LinearLayout)findViewById(R.id.calendar_header);
@@ -115,6 +119,7 @@ public class CalendarView extends LinearLayout
         btnNext = (ImageView)findViewById(R.id.calendar_next_button);
         txtDate = (TextView)findViewById(R.id.calendar_date_display);
         grid = (GridView)findViewById(R.id.calendar_grid);
+        addBtn = (Button) findViewById(R.id.addButton);
     }
 
     private void assignClickHandlers()
@@ -138,6 +143,15 @@ public class CalendarView extends LinearLayout
             {
                 currentDate.add(Calendar.MONTH, -1);
                 updateCalendar();
+            }
+        });
+
+        addBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AddActivity.class);
+                getContext().startActivity(intent);
+
             }
         });
 
