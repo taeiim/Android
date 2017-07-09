@@ -18,13 +18,14 @@ tools:context=".MainActivity">
     xmlns:calendarNS="http://schemas.android.com/apk/res/com.example.parktaeim.calendar_1"
     android:id="@+id/calendar_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="353dp"
     calendarNS:dateFormat="MMMM yyyy"/>
 
 <android.support.v4.view.ViewPager
     android:id="@+id/pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 </android.support.v4.view.ViewPager>
 
 </LinearLayout>
