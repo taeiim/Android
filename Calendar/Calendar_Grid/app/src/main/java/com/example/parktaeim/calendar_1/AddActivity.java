@@ -52,6 +52,7 @@ public class AddActivity extends Activity {
         Button cancelBtn = (Button) findViewById(R.id.cancelButton);
         Button okBtn = (Button) findViewById(R.id.okButton);
 
+        //취소 버튼 누르면 캘린더 있는 페이지로 (뒤로 가기)
         cancelBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +62,7 @@ public class AddActivity extends Activity {
 
         });
 
+        //ok버튼 누르면 캘린더 있는 페이지로
         okBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +74,7 @@ public class AddActivity extends Activity {
 
     }
 
+    //시작,종료 날짜와 시작,종료 시간 설정하는 버튼 누르면 각각 DatePickerDialog, TimePickerDialog 띄워주기
     public void OnClick(View v) {
         switch (v.getId()) {
             case R.id.startDatePickerButton:
@@ -90,6 +93,7 @@ public class AddActivity extends Activity {
         }
     }
 
+    //일정 시작 날짜 설정, textView에 띄워주기
     DatePickerDialog.OnDateSetListener startDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
         @Override
@@ -99,6 +103,7 @@ public class AddActivity extends Activity {
         }
     };
 
+    //일정 시작 시간
     TimePickerDialog.OnTimeSetListener startTimeSetListner = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int mMinute) {
@@ -107,6 +112,7 @@ public class AddActivity extends Activity {
         }
     };
 
+    //일정 종료 날짜
     DatePickerDialog.OnDateSetListener finishDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
         @Override
@@ -116,6 +122,7 @@ public class AddActivity extends Activity {
         }
     };
 
+    //일정 종료 시간
     TimePickerDialog.OnTimeSetListener finishTimeSetListner = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int mMinute) {
