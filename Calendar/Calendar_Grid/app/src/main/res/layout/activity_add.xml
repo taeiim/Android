@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <EditText
@@ -10,49 +10,137 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="제목"
-        />
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="시작"/>
+        android:text="시작" />
 
-    <EditText
-        android:id="@+id/startTimeEdit"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ex)2017.06.15. 오전 9시"/>
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startDatePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnClick"
+            android:text="date" />
+
+        <TextView
+            android:id="@+id/startDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/startDatePickerButton"
+            android:layout_alignBottom="@+id/startDatePickerButton"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/startDatePickerButton"
+            android:layout_toRightOf="@+id/startDatePickerButton"
+            android:hint="2017.07.05." />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startTimePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnClick"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/startTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/startTimePickerButton"
+            android:layout_alignBottom="@+id/startTimePickerButton"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/startTimePickerButton"
+            android:layout_toRightOf="@+id/startTimePickerButton"
+            android:hint="PM 2:00" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="종료"/>
+        android:text="종료" />
 
-    <EditText
-        android:id="@+id/finishTimeEdit"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ex)2017.06.15. 오후 2시"/>
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/finishDatePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnClick"
+            android:text="date" />
+
+        <TextView
+            android:id="@+id/finishDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/finishDatePickerButton"
+            android:layout_alignBottom="@+id/finishDatePickerButton"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/finishDatePickerButton"
+            android:layout_toRightOf="@+id/finishDatePickerButton"
+            android:hint="2017.07.06." />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/finishTimePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnClick"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/finishTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/finishTimePickerButton"
+            android:layout_alignBottom="@+id/finishTimePickerButton"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/finishTimePickerButton"
+            android:layout_toRightOf="@+id/finishTimePickerButton"
+            android:hint="PM 4:00" />
+    </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-    <CheckBox
-        android:id="@+id/alltimeCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="하루 종일                                      "/>
 
-    <CheckBox
-        android:id="@+id/notimeCheck"
-        android:layout_toRightOf="@+id/alltimeCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="시간 설정 안함"/>
+        <CheckBox
+            android:id="@+id/alltimeCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="하루 종일                                      " />
+
+        <CheckBox
+            android:id="@+id/notimeCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/alltimeCheck"
+            android:text="시간 설정 안함" />
 
     </RelativeLayout>
 
@@ -67,8 +155,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="#공부, #시험" />
+        android:hint="#공부, #시험"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/memoText"
@@ -81,8 +169,8 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:ems="30"
-        android:inputType="textPersonName"
-        android:hint="올백맞아야지 우하하하하하"/>
+        android:hint="올백맞아야지 우하하하하하"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/alarmText"
@@ -95,28 +183,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="없음" />
+        android:hint="없음"
+        android:inputType="textPersonName" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="취소"/>
+            android:text="취소" />
 
         <Button
             android:id="@+id/okButton"
-            android:layout_toRightOf="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="완료"/>
+            android:layout_toRightOf="@+id/cancelButton"
+            android:text="완료" />
     </RelativeLayout>
 
 
