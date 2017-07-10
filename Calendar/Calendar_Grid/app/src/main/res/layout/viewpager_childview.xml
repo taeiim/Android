@@ -2,15 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <Button
+    <TextView
+        android:id="@+id/viewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ViewPager"/>
-    <ImageView
-        android:id="@+id/img_viewpager_childimage"
+        android:text="title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:id="@+id/viewStartTime"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="시작시간 : "
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/viewFinishTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="종료시간 : "
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/viewMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이것은 메모입니당~~"
+        android:textSize="25dp"
+        android:layout_weight="0.22" />
+
+    <TextView
+        android:id="@+id/viewHashTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="#Calendar, #Coding"
+        android:textSize="25dp"/>
 
 </LinearLayout>

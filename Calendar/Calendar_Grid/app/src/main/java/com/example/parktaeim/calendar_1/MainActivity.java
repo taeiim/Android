@@ -1,6 +1,7 @@
 package com.example.parktaeim.calendar_1;
 
 import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -21,6 +22,7 @@ import android.os.Bundle;
 public class MainActivity extends ActionBarActivity
 {
 
+    ViewPager pager;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,17 +35,16 @@ public class MainActivity extends ActionBarActivity
         CalendarView cv = ((CalendarView)findViewById(R.id.calendar_view));
         cv.updateCalendar(events);
 
-        //findViewById(R.id.plusButton).setOnClickListener(mClickListener);
+        //ViewPager Adapter 객체 생성
+        pager = (ViewPager) findViewById(R.id.pager);
+
+        CustomAdapter adapter = new CustomAdapter(getLayoutInflater());
+
+        pager.setAdapter(adapter);
 
     }
 
-//    Button.OnClickListener mClickListener = new View.OnClickListener() {
-//        public void onClick(View v) {
-//            Intent intent = new Intent(MainActivity.this, AddActivity.class);
-//            startActivity(intent);
-//        }
-//
-//    };
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
