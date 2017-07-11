@@ -277,6 +277,7 @@ public class CalendarView extends LinearLayout
             //오늘 날짜는 더 간지나게 표시
             else if (day == today.getDate() && month==today.getMonth() && year==today.getYear())
             {
+
                 // if it is today, set it to blue/bold
                 ((TextView)view).setTypeface(null, Typeface.BOLD);
                 ((TextView)view).setTextColor(getResources().getColor(R.color.today));

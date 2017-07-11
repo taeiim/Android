@@ -8,3 +8,33 @@ android:gravity="center"
 android:textAppearance="@android:style/TextAppearance.Medium"
 android:textAlignment="center"
 android:background="@drawable/reminder"/>
+
+<!--<GridLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:rowCount="1"-->
+    <!--android:columnCount="4">-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/image1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/nemo_icon"-->
+        <!--android:scaleType="fitEnd"-->
+        <!--/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/image2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/nemo_icon"-->
+        <!--android:scaleType="fitEnd"-->
+        <!--/>-->
+
+
+
+
+
+<!--</GridLayout>-->
