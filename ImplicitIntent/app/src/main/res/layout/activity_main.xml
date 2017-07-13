@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.parktaeim.implicitintent_1.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="묵시적 인텐트 연습하기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="map"/>
+
+    <Button
+        android:id="@+id/webButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="web"/>
+
+    <Button
+        android:id="@+id/telButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TEL"/>
+
+</LinearLayout>
