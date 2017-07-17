@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.parktaeim.jsonobjectparsing.MainActivity">
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"/>
+
+    <EditText
+        android:id="@+id/editPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PW"/>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="json으로 변환 후 서버로 보내기"/>
+
+    <TextView
+        android:id="@+id/textViewJson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="result"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/parsingBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="서버에서 받아온 json 파싱"/>
+
+
+    <TextView
+        android:id="@+id/textViewParsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="result"
+        android:textSize="20dp"/>
+
+</LinearLayout>
