@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             idEdit.setText(pref.getString("id",""));
             pwEdit.setText(pref.getString("pw",""));
             autoLoginCheck.setChecked(true);
-
         }
 
         autoLoginCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
