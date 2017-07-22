@@ -8,8 +8,6 @@ import android.support.v7.widget.RecyclerView;
 
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
-import com.example.woong.adapter.MyRecyclerAdapter;
-import com.example.woong.vo.Album;
 
 import java.util.ArrayList;
 import java.util.List;
