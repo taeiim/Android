@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2,dpToPx(10),true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
@@ -91,26 +92,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void preparePosts() {
         int [] img = new int[]{
-                R.drawable.image1,
-                R.drawable.image2,
-                R.drawable.image3,
-                R.drawable.image4,
-                R.drawable.image5,
-                R.drawable.image6,
-                R.drawable.image7,
-                R.drawable.image8,
-                R.drawable.image9,
-                R.drawable.image10,
-                R.drawable.image11,
-                R.drawable.image12,
-                R.drawable.image13,
-                R.drawable.image14,
-                R.drawable.image15,
-                R.drawable.image16,
-                R.drawable.image17,
-                R.drawable.image18,
-                R.drawable.image19,
-                R.drawable.image20
+                R.drawable.image1, R.drawable.image2,
+                R.drawable.image3, R.drawable.image4,
+                R.drawable.image5, R.drawable.image6,
+                R.drawable.image7, R.drawable.image8,
+                R.drawable.image9, R.drawable.image10,
+                R.drawable.image11, R.drawable.image12,
+                R.drawable.image13, R.drawable.image14,
+                R.drawable.image15, R.drawable.image16,
+                R.drawable.image17, R.drawable.image18,
+                R.drawable.image19, R.drawable.image20
 
         };
 
@@ -179,43 +170,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration{
-        private int spanCount;
-        private int spacing;
-        private boolean includeEdge;
-
-        public GridSpacingItemDecoration(int spanCount,int spacing,boolean includeEdge){
-            this.spanCount = spanCount;
-            this.spacing = spacing;
-            this.includeEdge = includeEdge;
-        }
-
-        public void getItemOffsets(Rect outRect, View view,RecyclerView parent,RecyclerView.State state){
-            int position = parent.getChildAdapterPosition(view);
-            int column = position % spanCount;
-
-            if(includeEdge){
-                outRect.left = spacing = column * spacing / spanCount;
-                outRect.right = (column + 1) * spacing / spanCount;
-
-                if(position<spanCount){
-                    outRect.top = spacing;
-                }
-                outRect.bottom = spacing;
-            }else {
-                outRect.left = column * spacing / spanCount;
-                outRect.right = spacing - (column+1) * spacing / spanCount;
-                if(position>=spanCount){
-                    outRect.top = spacing;
-                }
-            }
-        }
-
-
-    }
-
-    private int dpToPx(int dp){
-        Resources r = getResources();
-        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,r.getDisplayMetrics()));
-    }
 }
