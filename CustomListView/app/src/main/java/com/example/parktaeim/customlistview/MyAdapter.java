@@ -2,6 +2,8 @@ package com.example.parktaeim.customlistview;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,16 +20,16 @@ import java.util.ArrayList;
  */
 
 public class MyAdapter extends BaseAdapter {
-    private ArrayList<MyItem> myItem = new ArrayList<>();
+    private ArrayList<MyItem> myItems = new ArrayList<>();
 
     @Override
     public int getCount() {
-        return myItem.size();
+        return myItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return myItem.get(position);
+        return myItems.get(position);
     }
 
     @Override
@@ -50,7 +52,10 @@ public class MyAdapter extends BaseAdapter {
         TextView name = (TextView) view.findViewById(R.id.name);
         TextView comment = (TextView) view.findViewById(R.id.comment);
 
-        MyItem item = (MyItem) getItem(position);
+        profile_img.setBackground(new ShapeDrawable(new OvalShape()));
+        profile_img.setClipToOutline(true);
+
+        MyItem item = myItems.get(position);
 
 
         profile_img.setImageDrawable(item.getProfile());
@@ -66,5 +71,10 @@ public class MyAdapter extends BaseAdapter {
         myItem.setProfile(img);
         myItem.setName(name);
         myItem.setComment(comment);
+
+        myItems.add(myItem);
+
     }
+
 }
+
