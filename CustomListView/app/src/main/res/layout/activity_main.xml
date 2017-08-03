@@ -16,6 +16,24 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:layout_below="@+id/textView"></ListView>
+
+    <RelativeLayout
+        android:layout_below="@id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/commentAddBtn"
+            android:layout_toRightOf="@+id/commentEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글쓰기"/>
+    </RelativeLayout>
 </RelativeLayout>
