@@ -1,47 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/profile_img"
-                android:layout_width="35dp"
-                android:layout_height="35dp" />
-
-            <TextView
-                android:id="@+id/title_textView"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/profile_img"
-                android:text="title"
-                android:textSize="16dp" />
-            <TextView
-                android:id="@+id/writer_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/profile_img"
-                android:layout_below="@+id/title_textView"
-                android:text="writer name"/>
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/date_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@id/writer_textView"
-                android:layout_below="@+id/title_textView"
-                android:text="date"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/profile"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"/>
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_img"
+                    android:text="title"
+                    android:textStyle="bold"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/writer_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_textView"
+                    android:layout_toRightOf="@id/profile_img"
+                    android:text="writer name" />
+
+                <TextView
+                    android:id="@+id/date_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_textView"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/writer_textView"
+                    android:text="date" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAFAFA"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/content_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:text="내용내용내용 블라블라 자유게시판이에용~~~가리  아무거나 쓰세여~~" />
+
+                <ImageView
+                    android:id="@+id/content_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image1"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/feelIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/feel_icon" />
+
+                <TextView
+                    android:id="@+id/feelCount_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/feelIcon"
+                    android:text="13" />
+
+                <ImageView
+                    android:id="@+id/commentIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/feelCount_textView"
+                    android:src="@drawable/comment_icon" />
+
+                <TextView
+                    android:id="@+id/commentCount_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/commentIcon"
+                    android:text="20" />
+
+                <ImageView
+                    android:id="@+id/shareIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/share_icon"
+                    android:layout_toRightOf="@+id/commentCount_textView"
+                    android:layout_marginLeft="175dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공유하기"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/shareIcon"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 </LinearLayout>
