@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class postListViewAdapter extends BaseAdapter {
     private Context mContext = null;
-    private ArrayList<PostsData> mPostsData = new ArrayList<PostsData>();
+    public ArrayList<PostsData> mPostsListData = new ArrayList<PostsData>();
 
     public postListViewAdapter(Context mContext){
         super();
@@ -30,12 +30,12 @@ public class postListViewAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mPostsData.size();
+        return mPostsListData.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mPostsData.get(position);
+        return mPostsListData.get(position);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class postListViewAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        PostsData mData = mPostsData.get(position);
+        PostsData mData = mPostsListData.get(position);
 
         // 미리보기 이미지 있을 때랑 없을 때
         if (mData.thumbnail != null) {
@@ -93,16 +93,17 @@ public class postListViewAdapter extends BaseAdapter {
 
 
     //추가
-    public void addItem(Drawable thumbnail, String mTitle, String mWriter, String mDate, String mViews){
+    public void addItem(String mTitle, String mWriter, String mDate, String mViews, Drawable thumbnail ){
         PostsData addInfo = null;
         addInfo = new PostsData();
-        addInfo.thumbnail = thumbnail;
-        addInfo.title = mTitle;
-        addInfo.date = mDate;
-        addInfo.writer = mWriter;
-        addInfo.views = mViews;
 
-        mPostsData.add(addInfo);
+        addInfo.title = mTitle;
+        addInfo.writer = mWriter;
+        addInfo.date = mDate;
+        addInfo.views = mViews;
+        addInfo.thumbnail = thumbnail;
+
+        mPostsListData.add(addInfo);
     }
 
 //    public void remove(int position){

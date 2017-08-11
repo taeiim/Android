@@ -13,4 +13,6 @@ public class PostsData {
     public String views;
     public Drawable thumbnail;
 
+
+
 }
