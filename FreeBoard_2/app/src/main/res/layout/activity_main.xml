@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.parktaeim.freeboard_2.MainActivity">
+    tools:context="com.example.parktaeim.freeboard_2.Activity.MainActivity">
 
-    <include
-        android:id="@+id/top"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/detailpage"
-        />
+
+    <ListView
+        android:id="@+id/postsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ListView>
 
 </android.support.constraint.ConstraintLayout>

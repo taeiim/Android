@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/titleTextView"
@@ -9,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="제목이다제목이다제목이다"
         android:textColor="#000000"
-        android:textSize="12dp"/>
+        android:textSize="17dp"/>
 
     <TextView
         android:id="@+id/writerTextView"
@@ -47,8 +48,11 @@
 
     <ImageView
         android:id="@+id/thumbnail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/thumbnail"/>
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/thumbnail"
+        android:layout_marginLeft="30dp"
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@id/viewsCountTextView"/>
 
 </RelativeLayout>
