@@ -1,10 +1,12 @@
 package com.example.parktaeim.freeboard_2.Activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -28,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //툴바할당
+        setSupportActionBar((Toolbar)findViewById(R.id.FreeBoardMainListToolbar));
+
+
         mListView = (ListView) findViewById(R.id.postsListView);
 
         mAdapter = new postListViewAdapter(this);
@@ -40,16 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.addItem("오늘 축제 꿀잼~~~", "박태임","2017.08.07","18",null);
 
 
-//        mListView.setOnItemClickListener(new OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View v, int position, long id){
-//                ListData mData = mAdapter.mListData.get(position);
-//                Toast.makeText(MainActivity.this, mData.mTitle, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-
+        //글 누르면 상세페이지로 넘어가기
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -60,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("writer",mData.writer);
                 intent.putExtra("date",mData.date);
                 intent.putExtra("views",mData.views);
-                //intent.putExtra("thumbnail", (Parcelable) mData.thumbnail);
 
                 startActivity(intent);
             }

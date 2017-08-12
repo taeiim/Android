@@ -30,6 +30,5 @@ public class DetailActivity extends Activity{
         writerTextView.setText(intent.getStringExtra("writer"));
         dateTextView.setText(intent.getStringExtra("date"));
         viewsTextView.setText(intent.getStringExtra("views"));
-        //thumbnail.setImageResource(intent.getIntExtra("thumbnail",0));
     }
 }
