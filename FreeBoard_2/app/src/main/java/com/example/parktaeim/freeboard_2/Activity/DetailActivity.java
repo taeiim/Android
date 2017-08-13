@@ -55,7 +55,6 @@ public class DetailActivity extends AppCompatActivity{
             finish();
             return true;
 
-
 //            Intent intent = new Intent(DetailActivity.this, MainActivity.class);
 //            startActivity(intent);
 //            finish();
