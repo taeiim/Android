@@ -92,7 +92,7 @@
     <!-- 글내용 구성 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:padding="20dp">
 
         <TextView
@@ -101,6 +101,17 @@
 
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D8D8D8"
+        android:layout_centerInParent="true"/>
+
+
+    <include layout="@layout/comment"/>
+
+
 
 
 </LinearLayout>

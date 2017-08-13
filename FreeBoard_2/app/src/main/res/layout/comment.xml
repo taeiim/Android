@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/commentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="댓글"/>
+
+        <TextView
+            android:id="@+id/commentCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="5"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/commentTextView"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/profile_icon"/>
+
+        <TextView
+            android:id="@+id/writerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_icon"
+            android:text="뽀로로"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_icon"
+            android:layout_marginTop="5dp"
+            android:text="가나다라마바사아자차카타파하 댓글내용이다람쥐 이것은 댓글 알날ㄴ이ㅏ러니ㅏㄹ언아ㅣㅓ리ㅏㅇㄴ러ㅏㄴ얼ㄴ이ㅏㅓㄹㄴ아ㅣㅓㄹ노허ㅗㅓㄷㅈㄱ지ㅗㄴㄹ모ㅓㄴ어ㅗ러ㅗㅁ러오리ㅓ몽러미ㅗㄹ어나ㅗ런알머ㅗ런오런오러온런오리ㅓㅗㄹ"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentTextView"
+            android:text="2017.08.13. 23:59"
+            android:textColor="#A4A4A4"/>
+    </RelativeLayout>
+
 
 </LinearLayout>
