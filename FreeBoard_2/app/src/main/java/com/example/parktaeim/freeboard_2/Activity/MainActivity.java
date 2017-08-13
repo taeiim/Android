@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
+            //검색버튼이 눌리면
             public boolean onQueryTextSubmit(String query) {
-                //Do some magic
                 return false;
             }
 
             @Override
+            //검색창에 글자를 쓰면 여기로 옴
             public boolean onQueryTextChange(String newText) {
-                //Do some magic
                 return false;
             }
         });
@@ -106,12 +108,10 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
             @Override
             public void onSearchViewShown() {
-                //Do some magic
             }
 
             @Override
             public void onSearchViewClosed() {
-                //Do some magic
             }
         });
         return true;

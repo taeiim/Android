@@ -32,10 +32,12 @@
 
     </FrameLayout>
 
+
     <ListView
         android:id="@+id/postsListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_container"></ListView>
+        android:layout_below="@id/toolbar_container"></ListView>
+
 
 </RelativeLayout>
