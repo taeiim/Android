@@ -108,10 +108,53 @@
         android:background="#D8D8D8"
         android:layout_centerInParent="true"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
-    <include layout="@layout/comment"/>
+        <TextView
+            android:id="@+id/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="댓글"/>
+
+        <TextView
+            android:id="@+id/commentCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="5"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/TextView"/>
+
+    </RelativeLayout>
 
 
+    <ListView
+        android:id="@+id/commentListView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/commentAddBtn"
+            android:layout_toRightOf="@+id/commentEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글쓰기"/>
+
+    </RelativeLayout>
 
 
 </LinearLayout>
