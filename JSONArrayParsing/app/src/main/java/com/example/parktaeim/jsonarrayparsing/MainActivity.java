@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
                         }
 
+
                         ParsingTextView.setText(idList+"\n"+pwList);
                     }catch (JSONException e){
                         e.printStackTrace();
